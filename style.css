@@ -1,0 +1,31 @@
+/* You can add more specific styles here if needed */
+body {
+    /* Example: Add a subtle background pattern or more complex gradient */
+    /* background-image: url('path/to/hearts-pattern.png'); */
+  }
+  
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+  }
+  
+  #result.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Ensure inputs don't have annoying autofill background */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+     transition: background-color 5000s ease-in-out 0s; /* Force background override */
+     -webkit-text-fill-color: #1f2937; /* gray-800 */
+  }
